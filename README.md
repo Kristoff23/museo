@@ -7,18 +7,18 @@
 <style>
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 1;
   padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Algerian;
 }
 
 /* Style the navigation container */
 .navbar {
-  background-color: #333;
-  width: 200px;
+  background-color: #3223;
+  width: 180px;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,14 +30,15 @@ body {
 .navbar a {
   display: block;
   padding: 10px 20px;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: background-color 0.3s;
+  
 }
 
 /* Change background color on hover */
 .navbar a:hover {
-  background-color: #555;
+  background-color: white;
   border-radius: 50%;
 }
 
@@ -76,11 +77,11 @@ body {
 <div class="content">
   <div id="home">
     <div class="header">
-      <h1>Welcome to Our Website</h1>
+      <h1>Moseo De Filipinas</h1>
     </div>
     <div>
       <h2>Home</h2>
-      <p>This is the content of the Home page. Replace this text with your actual content.</p>
+      <p>Our website is about a museum containing vast information in about phillipines</p>
     </div>
   </div>
   <div id="about">
@@ -89,7 +90,7 @@ body {
     </div>
     <div>
       <h2>About Us</h2>
-      <p>This is the content of the About Us page. Replace this text with your actual content.</p>
+      <p>This is the content of the About Us page.Information about our group.</p>
     </div>
   </div>
   <div id="references">
@@ -98,7 +99,7 @@ body {
     </div>
     <div>
       <h2>References</h2>
-      <p>This is the content of the References page. Replace this text with your actual content.</p>
+      <p>This is the content of the References page.Information and reference where we got the idea.</p>
     </div>
   </div>
   <div id="contact">
@@ -107,7 +108,7 @@ body {
     </div>
     <div>
       <h2>Contact</h2>
-      <p>This is the content of the Contact page. Replace this text with your actual content.</p>
+      <p>OUr personal information. Containing A little survey.</p>
     </div>
   </div>
 </div>
