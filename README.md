@@ -41,29 +41,6 @@ body {
   border-radius: 50%;
 }
 
-/* Add animation */
-.navbar a:hover::before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #555;
-  animation: pulse 0.5s infinite alternate;
-}
-
-/* Keyframe animation */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
-
 /* Style the content */
 .content {
   margin-left: 220px; /* Adjusted to accommodate the width of the navbar */
@@ -75,6 +52,15 @@ body {
   background-color: #f1f1f1;
   padding: 20px;
   text-align: center;
+}
+
+/* Show content based on target */
+.content > div {
+  display: none;
+}
+
+.content > div:target {
+  display: block;
 }
 </style>
 </head>
@@ -88,10 +74,42 @@ body {
 </div>
 
 <div class="content">
-  <div class="header">
-    <h1>Welcome to Our Website</h1>
+  <div id="home">
+    <div class="header">
+      <h1>Welcome to Our Website</h1>
+    </div>
+    <div>
+      <h2>Home</h2>
+      <p>This is the content of the Home page. Replace this text with your actual content.</p>
+    </div>
   </div>
-  <p>This is the content of the website. Replace this text with your actual content.</p>
+  <div id="about">
+    <div class="header">
+      <h1>About Us</h1>
+    </div>
+    <div>
+      <h2>About Us</h2>
+      <p>This is the content of the About Us page. Replace this text with your actual content.</p>
+    </div>
+  </div>
+  <div id="references">
+    <div class="header">
+      <h1>References</h1>
+    </div>
+    <div>
+      <h2>References</h2>
+      <p>This is the content of the References page. Replace this text with your actual content.</p>
+    </div>
+  </div>
+  <div id="contact">
+    <div class="header">
+      <h1>Contact</h1>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p>This is the content of the Contact page. Replace this text with your actual content.</p>
+    </div>
+  </div>
 </div>
 
 </body>
