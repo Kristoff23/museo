@@ -24,14 +24,14 @@
         }
 
         .painting-frame:hover + .painting-info,
-        .painting-info.active {
+        .painting-frame.clicked + .painting-info {
             display: block;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal">
+        <img class="painting-frame" src="mona_lisa.jpg" alt="Mona Lisa" onclick="toggleInfo(this)">
         <div class="painting-info">
             <h2>Title of Painting</h2>
             <p>Description of the painting goes here.</p>
@@ -41,5 +41,11 @@
     </div>
 
     <!-- Add more paintings as needed -->
+
+    <script>
+        function toggleInfo(painting) {
+            painting.classList.toggle("clicked");
+        }
+    </script>
 </body>
 </html>
