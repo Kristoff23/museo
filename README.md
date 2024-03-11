@@ -25,6 +25,7 @@
             position: absolute; /* Position painting info relative to painting frame */
             top: 0;
             left: 100%; /* Position painting info to the right of painting frame */
+            margin-left: 20px;
             width: 300px;
             height: 400px;
             background-color: #f0f0f0;
