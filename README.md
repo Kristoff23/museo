@@ -1,4 +1,4 @@
-<h1>HI</h1>
+<!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -14,6 +14,10 @@
             cursor: pointer;
             width: 300px;
             height: 400px;
+            background-image: url('Jose Rizal.jpg'); /* Set the image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Make the background fixed */
         }
 
         .painting-info {
@@ -80,8 +84,7 @@
 </head>
 <body>
     <div class="container">
-        <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal">
-          background-attachment: fixed;
+        <div class="painting-frame"></div>
         <div class="painting-info">
             <h2>Title of Painting</h2>
             <p>Description of the painting goes here.</p>
