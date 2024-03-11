@@ -11,9 +11,14 @@
         }
 
         .painting-frame {
-            cursor: pointer;
-            width: 300px;
-            height: 400px;
+    cursor: pointer;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+}
         }
 
         .painting-info {
