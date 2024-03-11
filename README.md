@@ -81,6 +81,7 @@
 <body>
     <div class="container">
         <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal">
+          background-attachment: fixed;
         <div class="painting-info">
             <h2>Title of Painting</h2>
             <p>Description of the painting goes here.</p>
