@@ -50,9 +50,9 @@
                 <p>Year: 1503–1506</p>
             </div>
         </div>
-        <!-- Add more paintings below -->
+        
         <div class="painting-container">
-            <img class="painting-frame" src="pacquiao.jpg" alt="pacquiao">
+            <img class="painting-frame" src="bonifacio.jpg" alt="Bonifacio">
             <div class="painting-info">
                 <h2>Title of Another Painting</h2>
                 <p>Description of another painting goes here.</p>
@@ -60,9 +60,35 @@
                 <p>Year: [Year]</p>
             </div>
         </div>
-        <!-- Add more paintings as needed -->
-    </div>
 
-    <!-- Add more paintings as needed -->
+ <div class="container">
+        <div class="painting-container">
+            <img class="painting-frame" src= emilio.jpg" alt="Emilio">
+            <div class="painting-info">
+                <h2>Title of Painting</h2>
+                <p>Description of the painting goes here.</p>
+                <p>Artist: Leonardo da Vinci</p>
+                <p>Year: 1503–1506</p>
+            </div>
+        </div>
+        
+        <div class="painting-container">
+            <img class="painting-frame" src="marcelo.jpg" alt="Marcelo">
+            <div class="painting-info">
+                <h2>Title of Another Painting</h2>
+                <p>Description of another painting goes here.</p>
+                <p>Artist: [Artist Name]</p>
+                <p>Year: [Year]</p>
+            </div>
+        </div>
+<div class="painting-container">
+            <img class="painting-frame" src="marcos.jpg" alt="marcos">
+            <div class="painting-info">
+                <h2>Title of Another Painting</h2>
+                <p>Description of another painting goes here.</p>
+                <p>Artist: [Artist Name]</p>
+                <p>Year: [Year]</p>
+            </div>
+        </div>
 </body>
 </html>
