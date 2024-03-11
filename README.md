@@ -1,117 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>Vertical Navigation Menu</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-  margin: 1;
-  padding: 0;
-}
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-right: 10cm; /* Adjust the distance between images */
+        }
 
-body {
-  font-family: Algerian;
-}
+        .painting-frame {
+            cursor: pointer;
+            width: 300px;
+            height: 400px;
+        }
 
-/* Style the navigation container */
-.navbar {
-  background-color: #3223;
-  width: 180px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  padding-top: 20px;
-}
+        .painting-info {
+            display: none;
+            position: relative;
+            padding: 20px;
+            animation: slideIn 0.5s forwards;
+            width: 300px;
+            height: 400px;
+            background-image: url('painting_info_bg.jpg');
+            background-size: cover;
+            color: #fff;
+            opacity: 0.9;
+        }
 
-/* Style the navigation links */
-.navbar a {
-  display: block;
-  padding: 10px 20px;
-  color: black;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  
-}
+        .arrow-button {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
 
-/* Change background color on hover */
-.navbar a:hover {
-  background-color: white;
-  border-radius: 50%;
-}
+        .arrow-button::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 12px solid #fff;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
 
-/* Style the content */
-.content {
-  margin-left: 220px; /* Adjusted to accommodate the width of the navbar */
-  padding: 20px;
-}
+        .painting-frame:hover + .painting-info,
+        .painting-info.active {
+            display: block;
+        }
 
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
+        .arrow-button.active {
+            display: block;
+        }
 
-/* Show content based on target */
-.content > div {
-  display: none;
-}
-
-.content > div:target {
-  display: block;
-}
-</style>
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal">
+        <div class="painting-info">
+            <h2>Title of Painting</h2>
+            <p>Description of the painting goes here.</p>
+            <p>Artist: Leonardo da Vinci</p>
+            <p>Year: 1503–1506</p>
+            <button class="arrow-button"></button>
+        </div>
+    </div>
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#about">About Us</a>
-  <a href="#references">References</a>
-  <a href="#contact">Contact</a>
-</div>
+    <!-- Add more paintings as needed -->
 
-<div class="content">
-  <div id="home">
-    <div class="header">
-      <h1>Moseo De Filipinas</h1>
-    </div>
-    <div>
-      <h2>Home</h2>
-      <p>Our website is about a museum containing vast information in about phillipines</p>
-    </div>
-  </div>
-  <div id="about">
-    <div class="header">
-      <h1>About Us</h1>
-    </div>
-    <div>
-      <h2>About Us</h2>
-      <p>This is the content of the About Us page.Information about our group.</p>
-    </div>
-  </div>
-  <div id="references">
-    <div class="header">
-      <h1>References</h1>
-    </div>
-    <div>
-      <h2>References</h2>
-      <p>This is the content of the References page.Information and reference where we got the idea.</p>
-    </div>
-  </div>
-  <div id="contact">
-    <div class="header">
-      <h1>Contact</h1>
-    </div>
-    <div>
-      <h2>Contact</h2>
-      <p>OUr personal information. Containing A little survey.</p>
-    </div>
-  </div>
-</div>
+    <script>
+        document.querySelectorAll('.painting-frame').forEach(paintingFrame => {
+            const paintingInfo = paintingFrame.nextElementSibling;
+            const arrowButton = paintingInfo.querySelector('.arrow-button');
 
+            paintingFrame.addEventListener('click', () => {
+                paintingInfo.classList.toggle('active');
+                arrowButton.classList.toggle('active');
+            });
+
+            arrowButton.addEventListener('click', () => {
+                paintingInfo.classList.toggle('active');
+                arrowButton.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
