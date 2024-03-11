@@ -7,25 +7,24 @@
             flex-direction: column; /* Stack paintings vertically */
             align-items: flex-start; /* Align paintings to the left */
             padding: 20px;
-            position: relative; /* Required for absolute positioning of painting info */
         }
 
         .painting-container {
             position: relative; /* Required for absolute positioning of painting info */
+            margin-bottom: 20px; /* Added margin for vertical spacing */
         }
 
         .painting-frame {
             cursor: pointer;
             width: 300px;
             height: 400px;
-            margin-bottom: 20px; /* Added margin for vertical spacing */
             position: relative; /* Required for absolute positioning of painting info */
         }
 
         .painting-info {
             position: absolute; /* Position painting info relative to painting frame */
             top: 0;
-            left: 340px; /* Adjust as needed to position painting info */
+            left: 100%; /* Position painting info to the right of painting frame */
             width: 300px;
             height: 400px;
             background-color: #f0f0f0;
