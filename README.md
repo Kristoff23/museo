@@ -4,7 +4,7 @@
     <style>
         .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             padding: 20px;
         }
@@ -13,6 +13,7 @@
             cursor: pointer;
             width: 300px;
             height: 400px;
+            margin-right: 20px; /* Added margin for spacing */
         }
 
         .painting-info {
@@ -23,15 +24,14 @@
             padding: 20px;
         }
 
-        .painting-frame:hover + .painting-info,
-        .painting-frame.clicked + .painting-info {
+        .container:hover .painting-info {
             display: block;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal" onclick="toggleInfo(this)">
+        <img class="painting-frame" src="Jose Rizal.jpg" alt="Mona Lisa">
         <div class="painting-info">
             <h2>Title of Painting</h2>
             <p>Description of the painting goes here.</p>
@@ -41,11 +41,5 @@
     </div>
 
     <!-- Add more paintings as needed -->
-
-    <script>
-        function toggleInfo(painting) {
-            painting.classList.toggle("clicked");
-        }
-    </script>
 </body>
 </html>
