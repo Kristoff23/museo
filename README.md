@@ -17,7 +17,7 @@
         }
 
         .painting-info {
-            width: 300px;
+            width: 700px;
             height: 400px;
             background-color: #f0f0f0;
             display: none;
@@ -32,7 +32,7 @@
 </head>
 <body>
     <div class="container">
-        <img class="painting-frame" src="Jose Rizal" alt="Jose Rizal" onclick="toggleInfo()">
+        <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal" onclick="toggleInfo()">
         <div class="painting-info">
             <h2>Title of Painting</h2>
             <p>Description of the painting goes here.</p>
