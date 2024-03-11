@@ -4,27 +4,32 @@
     <style>
         .container {
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            flex-direction: column; /* Stack paintings vertically */
+            align-items: flex-start; /* Align paintings to the left */
             padding: 20px;
+            position: relative; /* Required for absolute positioning of painting info */
         }
 
         .painting-frame {
             cursor: pointer;
             width: 300px;
             height: 400px;
-            margin-right: 40px; /* Added margin for spacing */
+            margin-bottom: 20px; /* Added margin for vertical spacing */
+            position: relative; /* Required for absolute positioning of painting info */
         }
 
         .painting-info {
-            width: 700px;
+            position: absolute; /* Position painting info relative to painting frame */
+            top: 0;
+            left: 340px; /* Adjust as needed to position painting info */
+            width: 300px;
             height: 400px;
             background-color: #f0f0f0;
             display: none;
             padding: 20px;
         }
 
-        .container:hover .painting-info,
+        .painting-frame:hover + .painting-info,
         .painting-frame.clicked + .painting-info {
             display: block;
         }
@@ -32,22 +37,28 @@
 </head>
 <body>
     <div class="container">
-        <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal" onclick="toggleInfo()">
-        <div class="painting-info">
-            <h2>Title of Painting</h2>
-            <p>Description of the painting goes here.</p>
-            <p>Artist: Leonardo da Vinci</p>
-            <p>Year: 1503–1506</p>
+        <div>
+            <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal">
+            <div class="painting-info">
+                <h2>Title of Painting</h2>
+                <p>Description of the painting goes here.</p>
+                <p>Artist: Leonardo da Vinci</p>
+                <p>Year: 1503–1506</p>
+            </div>
         </div>
+        <!-- Add more paintings below -->
+        <div>
+            <img class="painting-frame" src="pacquiao.jpg" alt="pacquiao">
+            <div class="painting-info">
+                <h2>Title of Another Painting</h2>
+                <p>Description of another painting goes here.</p>
+                <p>Artist: [Artist Name]</p>
+                <p>Year: [Year]</p>
+            </div>
+        </div>
+        <!-- Add more paintings as needed -->
     </div>
 
     <!-- Add more paintings as needed -->
-
-    <script>
-        function toggleInfo() {
-            var info = document.querySelector('.painting-frame');
-            info.classList.toggle("clicked");
-        }
-    </script>
 </body>
 </html>
