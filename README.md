@@ -13,7 +13,7 @@
             cursor: pointer;
             width: 300px;
             height: 400px;
-            margin-right: 20px; /* Added margin for spacing */
+            margin-right: 40px; /* Added margin for spacing */
         }
 
         .painting-info {
@@ -24,14 +24,15 @@
             padding: 20px;
         }
 
-        .container:hover .painting-info {
+        .container:hover .painting-info,
+        .painting-frame.clicked + .painting-info {
             display: block;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="painting-frame" src="Jose Rizal.jpg" alt="Mona Lisa">
+        <img class="painting-frame" src="mona_lisa.jpg" alt="Mona Lisa" onclick="toggleInfo()">
         <div class="painting-info">
             <h2>Title of Painting</h2>
             <p>Description of the painting goes here.</p>
@@ -41,5 +42,12 @@
     </div>
 
     <!-- Add more paintings as needed -->
+
+    <script>
+        function toggleInfo() {
+            var info = document.querySelector('.painting-frame');
+            info.classList.toggle("clicked");
+        }
+    </script>
 </body>
 </html>
