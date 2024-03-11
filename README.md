@@ -63,7 +63,7 @@
 
  <div class="container">
         <div class="painting-container">
-            <img class="painting-frame" src= emilio.jpg" alt="emilio">
+            <img class="painting-frame" src=" emilio.jpg" alt="emilio">
             <div class="painting-info">
                 <h2>Title of Painting</h2>
                 <p>Description of the painting goes here.</p>
