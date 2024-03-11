@@ -10,6 +10,10 @@
             position: relative; /* Required for absolute positioning of painting info */
         }
 
+        .painting-container {
+            position: relative; /* Required for absolute positioning of painting info */
+        }
+
         .painting-frame {
             cursor: pointer;
             width: 300px;
@@ -29,7 +33,7 @@
             padding: 20px;
         }
 
-        .painting-frame:hover + .painting-info,
+        .painting-container:hover .painting-info,
         .painting-frame.clicked + .painting-info {
             display: block;
         }
@@ -37,7 +41,7 @@
 </head>
 <body>
     <div class="container">
-        <div>
+        <div class="painting-container">
             <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal">
             <div class="painting-info">
                 <h2>Title of Painting</h2>
@@ -47,7 +51,7 @@
             </div>
         </div>
         <!-- Add more paintings below -->
-        <div>
+        <div class="painting-container">
             <img class="painting-frame" src="pacquiao.jpg" alt="pacquiao">
             <div class="painting-info">
                 <h2>Title of Another Painting</h2>
