@@ -31,7 +31,7 @@
 </head>
 <body>
     <div class="container">
-        <img class="painting-frame" src="mona_lisa.jpg" alt="Mona Lisa" onclick="toggleInfo(this)">
+        <img class="painting-frame" src="Jose Rizal.jpg" alt="Jose Rizal" onclick="toggleInfo(this)">
         <div class="painting-info">
             <h2>Title of Painting</h2>
             <p>Description of the painting goes here.</p>
