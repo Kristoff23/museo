@@ -2,7 +2,8 @@
 <html>
 <head>
     <style>
-h2 {font-size: 70px;}
+h2 {font-size: 70px;
+color: rgb(184, 247, 247) ;}
 .p1 {
   font-family: "Times New Roman", Times, serif;
 }
@@ -18,7 +19,10 @@ h2 {font-size: 70px;}
 
 
         body {
-            background-image: url("bg.jpg");
+            background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+            url("bg.jpg");
+        
             background-size: cover; 
             background-repeat: no-repeat; 
             background-position: center; 
@@ -42,6 +46,7 @@ h2 {font-size: 70px;}
         .painting-frame {
             cursor: pointer;
             margin-top: 130px;
+            margin-left: 130px;   
             width: 300px;
             height: 400px;
             position: relative;
@@ -50,7 +55,7 @@ h2 {font-size: 70px;}
         .painting-info {
             position: absolute; 
             top: 130px;
-            left: 200%; 
+            left: 130%; 
             margin-left: 20px;
             width: 700px;
             height: 360px;
