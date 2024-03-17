@@ -1,193 +1,138 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Contact Us Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Museo De Filipinas_Homepage</title>
+        <link rel="stylesheet" href="contact.css">
+    </head>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
-*
-{
+    *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Antonio', sans-serif;
+    font-family: "poppins", sans-serif;
 }
-.contact
-{
-    position: relative;
+body{
     min-height: 100vh;
-    padding: 50px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: url(contactpage.jpg);
+    background: linear-gradient(rgba(17, 17, 17, 0.596),rgba(0,0,0,0.7)), url(back.jpg);
     background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
-.contact .content
-{
-    max-width: 800px;
-    text-align: center;
-}
-.contact .content h2
-{
-    font-size: 36px;
-    font-weight: 500;
-    color:#fff;
-}
-.contact .content p
-{
-    font-weight: 300;
-    color: #fff;
-}
-.container
-{
+.contact-section{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
 }
-.container .contactInfo
-{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-.container .contactInfo .box
-{
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-.container .contactInfo .box .icon
-{
-    min-width: 60px;
-    height: 60px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
-}
-.container .contactInfo .box .text
-{
-    display: flex;
-    margin-left: 30px;
-    font-size: 16px;
+
+.contact-info{
     color: #fff;
-    flex-direction: column;
-    font-weight: 300;
-}
-.container .contactInfo .box .text .h3
-{
-    font-weight: 300;
-    color: black;
-}
-.contactForm
-{
-    width: 80%;
-    padding:70px;
-    background: #fff;
-}
-.contactForm h2
-{
-    font-size: 30px;
-    color: #333;
-    font-weight: 500;
-}
-.contactForm .inputBox
-{
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    font-size: 18px;
 
 }
-.contactForm .inputBox input,
-.contactForm .inputBox textarea
-{
-    width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
+.contact-info i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.contact-form{
+    max-width: 700px;
+    margin-right: 50px;
+}
+.contact-info, .contact-form{
+    flex: 1;
+}
+.contact-form h2{
+    color:#fff;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.contact-form .text-box{
+    background: #eeeaea;
+    color:#131111;
     border: none;
-    border-bottom: 2px solid #333;
-    outline: none;
-    resize: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
-.contactForm .inputBox span
-{
-    position:absolute;
-    left: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5s;
-    color: #666;
+.contact-form .text-box:first-child{
+    margin-right: 15px;
 }
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:valid ~ span,
-.contactForm .inputBox textarea:focus ~ span,
-.contactForm .inputBox textarea:valid ~ span
-{
-    color: black;
-    font-size: 12px;
-    transform: translateY(-20px);
+.contact-form textarea{
+    background: #fcf7f7;
+    color:#2c2a2a;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize:vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
+.contact-form .send-btn{
+    float: right;
+    background: #523737;
+    color:#fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: background;
+}
+.contact-form .send-btn:hover{
+    background: #fff
+}
+
+.alert-success{
+    z-index: 1;
+    background: #d4d4d4;
+    font-size: 18px;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: fixed;
+    right: 0;
+    top: 10px;
+    border-left: 8px solid #fff;
+    border-radius: 4px;
+                                     }
   </style>
-  <body>
-    <section class="contact">
-      <div class="content">
-        <h2>Contact Us</h2>
-        <p>Send queries through our platforms!</p>
-      </div>
-      <div class="container">
-        <div class="contactInfo">
-          <div class="box">
-            <div class="icon"><i class="fa-light fa-map-location-dot"></i></div>
-            <div class="text">
-              <h3>Address</h3>
-              <p>4331 Alborida street, Los Baños Cabuyao City, Laguna</p>
-            </div>
-            <div class="box">
-              <div class="icon"><i class="fa-light fa-envelope"></i></div>
-              <div class="text">
-                <h3>Email</h3>
-                <p>museodefilipinas@gmail.com</p>
-              </div>
-              <div class="box">
-                <div class="icon"><i class="fa-light fa-phone"></i></div>
-                <div class="text">
-                  <h3>Phone</h3>
-                  <p>0911 143 5263</p>
-                </div>
-          </div>
+<body>
+    <div class="contact-section">
+        <div class="contact-info">
+            <div><i class="fas fa-map-marker-alt"></i>4331 Alborida street, Los Baños Cabuyao, Laguna</div>
+            <div><i class="fas fa-envelope"></i>museodefilipinas@gmail.com</div>
+            <div><i class="fas fa-phone"></i>0911 143 5263</div>
+        
         </div>
-        <div class="contactForm">
-          <form>
-            <h2>Send Message</h2>
-            <div class="inputBox">
-              <input type="text" name="" required="required">
-              <span>Full Name</span>
-            </div>
-            <div class="inputBox">
-              <input type="text" name="" required="required">
-              <span>Email</span>
-            </div>
-            <div class="inputBox">
-              <textarea required="required"></textarea>
-              <span>Type your message...</span>
-              <div class="inputBox"></div>
-              <input type="submit" name="" value="Send">
-            </div>
-          </form>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form class="contact" action="" method="post">
+                <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" name="submit" class="send-btn" value="Send">
+            </form>
         </div>
-      </div>
-    </section>
-  </body>
-</html>
+    </div>
+</body>
