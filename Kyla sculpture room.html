@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+h2 {
+    font-size: 70px;
+    color: rgb(184, 247, 247);
+}
+
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+body {
+    background: linear-gradient(rgba(17, 17, 17, 0.596), rgba(0, 0, 0, 0.7)), url(pics\ sculpture/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.painting-container {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.painting-frame {
+    cursor: pointer;
+    margin-top: 130px;
+    margin-left: 130px;
+    width: 300px;
+    height: 400px;
+    position: relative;
+}
+
+.painting-info {
+    position: absolute;
+    top: 130px;
+    left: 130%;
+    margin-left: 20px;
+    width: 900px;
+    height: 360px;
+    background-color: #b9b1b1a6;
+    font-size: 18px;
+    white-space: normal;
+    display: none;
+    padding: 10px;
+}
+
+.column {
+    flex: 1;
+    width: 200px; 
+    max-width: 200px; 
+    overflow: hidden; 
+}
+
+.description {
+    flex: 2;
+    width: 600px; 
+    max-width: 400px;
+    max-height: 290px;
+    overflow-y: auto;
+    white-space: normal;
+}
+
+.painting-frame:hover + .painting-info,
+.painting-frame.clicked + .painting-info {
+    display: block;
+}
+
+.painting-info .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 1px;
+}
+
+.painting-info .row {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+</style>
+</head>
+<body>
+
+<h2><center>Welcome to Heroes Room</center></h2>
+
+<div class="container">
+    <div class="painting-container">
+        <img class="painting-frame" src="pics sculpture/1.png" alt="Bonifacio National Monument" onclick="toggleInfo(this)">
+        <div class="painting-info">
+            <div class="grid">
+                <div class="row">
+                    <div class="column"><h3>Name/Title</h3></div>
+                </div>
+                <div class="row">
+                    <div class="column"><h3>Sculptor</h3></div>
+                    <div class="description"><h3>Description</h3></div>
+                </div>
+                <div class="row">
+                    <div class="column"><p>Bonifacio National Monument</p></div>
+                </div>  
+                <div class="row">
+                    <div class="column"><p>Guillermo Estrella Tolentino</p></div>
+                    <div class="description"><p><center>The Andrés Bonifacio Monument, commonly known simply as Bonifacio Monument
+                        or Monumento, is a memorial monument in Caloocan, Philippines which was designed by National Artist 
+                        Guillermo Tolentino to commemorate the Philippine revolutionary Andrés Bonifacio, the founder and
+                        Supremo of the Katipunan, who fought for independence from the politically and 
+                        socially ruthless colonial rule by Spain.<br>
+                            The monument 13.7 meters (45 ft) in height with symbolic
+                        images and other features known as the "Cry of Balintawak" is acclaimed as one of the best monuments 
+                        in the world.</center></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="painting-container">
+      <img class="painting-frame" src="pics sculpture/2.png" alt="Jose Rizal" onclick="toggleInfo(this)">
+      <div class="painting-info">
+        <div class="grid">
+            <div class="row">
+                <div class="column"><h3>Name/Title</h3></div>
+            </div>
+            <div class="row">
+                <div class="column"><h3>Sculptor</h3></div>
+                <div class="description"><h3>Description</h3></div>
+            </div>
+              <div class="row">
+                  <div class="column"><p>La Venganza De la Madre (The Mother’s Revenge)</p></div>
+              </div>  
+              <div class="row">
+                  <div class="column"><p>José Protacio Rizal Mercado y Alonso Realonda</p></div>
+                  <div class="description"><p>This 1894 terracotta sculpture by Dr. Jose Rizal showing a mother dog trying to
+                    rescue her helpless pup from the bite of a crocodile is a symbolic representation of Filipino patriots
+                    (mother dog) saving the defenseless countrymen (the puppy) from the clutches of Spanish power (crocodile).</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="painting-container">
+        <img class="painting-frame" src="pics sculpture/3.png" alt="Jose Rizal" onclick="toggleInfo(this)">
+            <div class="painting-info">
+                <div class="grid">
+                    <div class="row">
+                        <div class="column"><h3>Name/Title</h3></div>
+                    </div>
+                    <div class="row">
+                        <div class="column"><h3>Sculptor</h3></div>
+                        <div class="description"><h3>Description</h3></div>
+                    </div>
+                    <div class="row">
+                        <div class="column"><p>Mother and Child</p></div>
+                    </div>  
+                    <div class="row">
+                        <div class="column"><p>Esabelio Veloso Abueva</p></div>
+                        <div class="description"><p><center>This piece is sculpted from adobe and shows an abstract figure of a
+                         woman embracing a child in a sitting position. The child clings to the head of his mother. The 
+                         National Museum prides itself on this Mother and Child sculpture created by Napoleon V. Abueva, the 
+                         Father of Modern Philippine Sculpture.</center></p></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<div class="container">
+  <div class="painting-container">
+      <img class="painting-frame" src="pics sculpture/4.png" alt="Jose Rizal" onclick="toggleInfo(this)">
+      <div class="painting-info">
+        <div class="grid">
+            <div class="row">
+                <div class="column"><h3>Name/Title</h3></div>
+            </div>
+            <div class="row">
+                <div class="column"><h3>Sculptor</h3></div>
+                <div class="description"><h3>Description</h3></div>
+            </div>
+              <div class="row">
+                <div class="column"><p>Lualhati</p></div>
+              </div>  
+              <div class="row">
+                  <div class="column"><p>Guillermo Estrella Tolentino</p></div>
+                  <div class="description"><p>Lualhati is a marble portrait of Guillermo Tolentino’s daughter when she was six years 
+                    old. Lualhati, who now resides in Germany, is among Tolentino’s seven children with his wife, Paz Raymundo.
+                    This is the only sculpture of the artist’s family member in the National Fine Arts Collection.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="painting-container">
+        <img class="painting-frame" src="pics sculpture/5.png" alt="Jose Rizal" onclick="toggleInfo(this)">
+        <div class="painting-info">
+            <div class="grid">
+                <div class="row">
+                    <div class="column"><h3>Name/Title</h3></div>
+                </div>
+                <div class="row">
+                    <div class="column"><h3>Sculptor</h3></div>
+                    <div class="description"><h3>Description</h3></div>
+                </div>
+                <div class="row">
+                    <div class="column"><p>La Venganza De la Madre (The Mother’s Revenge)</p></div>
+                </div>  
+                <div class="row">
+                    <div class="column"><p>José Protacio Rizal Mercado y Alonso Realonda</p></div>
+                    <div class="description"><p>This 1894 terracotta sculpture by Dr. Jose Rizal showing a mother dog trying to
+                      rescue her helpless pup from the bite of a crocodile is a symbolic representation of Filipino patriots
+                      (mother dog) saving the defenseless countrymen (the puppy) from the clutches of Spanish power (crocodile).</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<script>
+function toggleInfo(painting) {
+    painting.classList.toggle("clicked");
+}
+</script>
+</body>
+</html>

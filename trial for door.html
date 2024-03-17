@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang= "en">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(197, 193, 193, 0.753);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(45deg, #a0584fb6, #805044); /* Gradient background */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #e0dad9b6, #c9b6b1); /* Adjust the gradient on hover */
+
+}
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .door {
+    background-color: #61412D;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    /* inner layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #left-door {
+    top: 0;
+    left: 0;
+    border-right: 1px solid black;
+    /* transition */
+    transform-origin: left;
+    transition: transform 3s;
+  }
+  
+  #right-door {
+    top: 0;
+    right: 0;
+    border-left: 1px solid black;
+    /* transition */
+    transform-origin: right;
+    transition: transform 3s;
+  }
+  
+  .shape {
+    border: 4px solid black;
+    width: 100px;
+    height: 130px;
+  }
+  
+  .knob {
+    width: 10px;
+    height: 50px;
+    background-color: #D7DADE;
+    position: absolute;
+  }
+  
+  #left-knob {
+    top: 50%;
+    right: 10px;
+  }
+  
+  #right-knob {
+    top: 50%;
+    left: 10px;
+  }
+  
+  /* Door swing effect */
+  .wrapper:hover #left-door{
+    transform: rotateY(-140deg);
+  }
+  
+  .wrapper:hover #right-door{
+    transform: rotateY(140deg);
+  }
+
+
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="sculp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <a href="test.html" target="_blank">
+            <button class="cta-button">Explore</button>
+        </a>
+      <div id="left-door" class="door">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div id="left-knob" class="knob"></div>
+      </div>
+      <div id="right-door" class="door">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div id="right-knob" class="knob"></div>
+        
+      </div>
+    </div>
+  </body>
+  
