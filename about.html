@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="about2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background:linear-gradient(rgba(17, 17, 17, 0.596),rgba(0,0,0,0.7)), url(about/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.heading{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin:20px auto;
+}
+.heading h1{
+    font-size: 60px;
+    color:#fff;
+    margin-bottom: 25px;
+    position: relative;
+}
+.heading h1::after{
+    content:"";
+    position: absolute;
+    width:100%;
+    height: 4px;
+    display: block;
+    margin:0 auto;
+    background-color: #6d4747;
+}
+.heading p{
+    font-size: 18px;
+    color:#fff;
+    margin-bottom: 35px;
+}
+.container{
+    width:90%;
+    margin:0 auto;
+    padding:20px 20px;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.about-image{
+    flex:1;
+    margin-right: 40px;
+    overflow:hidden;
+}
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+.about-image:hover img{
+    transform: scale(1.2);
+}
+.about-content{
+    flex:1;
+}
+.about-content h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color:#fff;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color:#fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:justify;
+}
+.back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+</style>
+<body>
+    <a class="back-button" href="Home page.html">&#9664;</a>
+
+   <div class="heading">
+    <h1>About Us</h1>
+    <p>Museo De Filipinas is a website that highlights the Filipino's art, culture, hero, and tourist spots. </p>
+   </div> 
+   <div class="container">
+    <section class="about">
+        <div class="about-image">
+            <img src="about/1.jpg">
+        </div>
+        <div class="about-content">
+            <h2>Mabuhay Las Filipinas!<br>Wanna Know more about Museo <br>De Filipinas?</h2>
+            <p>Museo de Filipinas stands as a beacon of Filipino heritage and cultural pride, preserving the rich tapestry of the Philippines for generations to come. Stepping into its halls, visitors embark on a journey through time, immersed in the diverse arts, traditions, and narratives that define the Filipino identity. From intricate artworks to vibrant displays of indigenous crafts, the museum encapsulates the essence of Filipino creativity and resilience. <br><br>With each exhibit meticulously curated, Museo de Filipinas serves as a vital educational hub, fostering a deeper understanding and appreciation of the nation's multifaceted heritage.Within its hallowed halls, an immersive experience awaits, where the senses are awakened by the sights, sounds, and scents of the Philippines' diverse arts, traditions, and narratives. Admire the intricate brushstrokes of masterful artworks, each canvas a window into the soul of Filipino creativity. Marvel at the vibrant displays of indigenous crafts, each intricately woven thread a testament to the ingenuity and resilience of the Filipino spirit.
+            </p>
+        </div>
+    </section>
+   </div>  
+</body>

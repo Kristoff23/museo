@@ -1,0 +1,299 @@
+
+Kyla Mae
+Kyla Mae S. Amparo
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="feedback2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(rgba(17, 17, 17, 0.596),rgba(0,0,0,0.7)), url(feedback/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    color: #fff;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    color: #fff;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #a0584fb6
+}
+
+form .gender-details .gender-title{
+    font-size: 17px;
+    font-weight: 492;
+    color:#fff;
+}
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+    color: #fff;
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color: #d9d9d9;
+    background: #a0584fb6;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .citizen-details .citizen-title{
+    font-size: 17px;
+    font-weight: 492;
+    color: #fff;
+}
+form .citizen-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+    color:#fff;
+}
+.citizen-details .category label{
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+}
+.citizen-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-4:checked ~ .category label .four,
+#dot-5:checked ~ .category label .five,
+#dot-6:checked ~ .category label .six{
+    border-color: #d9d9d9;
+    background: #a0584fb6;
+}
+
+.p11{
+    color: #fff;
+}
+
+.p1{
+    color:#fff;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, rgba(145, 94, 94, 0.596),rgba(128, 72, 72, 0.7));
+}
+form .button input:hover{
+    background: linear-gradient(-135deg, rgba(121, 77, 77, 0.596),rgba(122, 77, 77, 0.7));
+}
+@media (max-width: 584px) {
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-details .category{
+        width:100%;
+    }
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+      width: 0;
+    }
+}
+.back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+        }
+</style>
+<body>
+    <a class="back-button" href="Home page.html">&#9664;</a>
+
+    <div class="container">
+        <div class="title">Feedback Form</div>
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">User Name</span>
+                    <input type="text" placeholder="Enter your username" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Age</span>
+                    <input type="text" placeholder="Enter your age" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+            
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                        
+                                
+                    </div>
+                    <div class="citizen-details">
+                        <input type="radio" name="citizen" id="dot-4">
+                        <input type="radio" name="citizen" id="dot-5">
+                        <input type="radio" name="citizen" id="dot-6">
+                        <span class="citizen-title">Citizenship</span>
+                        <div class="category">
+                            <label for="dot-4">
+                                <span class="dot four"></span>
+                                <span class="citizen">Filipino</span>
+                            </label>
+                            <label for="dot-5">
+                                <span class="dot five"></span>
+                                <span class="citizen">Foreigner</span>
+                            </label>
+                            <label for="dot-6">
+                                <span class="dot six"></span>
+                                <span class="citizen">Others</span>
+                            </label>
+                            
+                                    
+                        </div>
+            <p class="p11">Kindly rate your experience:</p><br>
+            <select rating="select2" size="1">
+            <option value="1 star"> 1 star</option>
+            <option value="2 star"> 2 star</option>
+            <option value="3 star"> 3 star</option>
+            <option value="4 star"> 4 star</option>
+            <option value="5 star"> 5 star</option>
+            </select><br>
+        </br>
+        <p class="p1">Kindly tell us about your recommendations:</p><br>
+        <textarea name="Tell us" rows="7" cols="90" wrap="light">
+        </textarea><br><br>
+        </div>
+                </div>
+            <div class="button">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>

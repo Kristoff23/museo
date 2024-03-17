@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Museo De Filipinas_Homepage</title>
+        <link rel="stylesheet" href="homepage.css">
+    </head>
+    <style>
+        
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', san-serif;
+}
+.Section1{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 80px;
+    color:#815353;
+    font-size: 18px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.Section2{
+    text-align: center;
+}
+.Section2 h1{
+    font-size: 140px;
+    color: #f0ebeb;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.Section2 h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.Section2 a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+    </style>
+    <body>
+        <div class="Section1">
+
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="main page/bg.mp4"" type="video/mp4">
+            </video>
+            <nav>
+                <div class="logo">
+                    <h1>MUSEUM</h1>
+                    </div>
+                <ul>
+                    <li><a href="Home page.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="room.html">ROOM</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="feedback.html">FEEDBACK</a></li>
+                </ul>
+            
+            </nav>
+            <div class="Section2">
+                <h1>Museo De <br>Filipinas</h1>
+                <a>Welcome!</a>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Museo De Filipinas_Room</title>
+        <link rel="stylesheet" href="room2.css">
+    </head>
+    <style>
+        body{
+    background:linear-gradient(rgba(17, 17, 17, 0.596),rgba(0,0,0,0.7)), url(pics\ for\ room/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.wrapper{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+.card{
+    width: 700px;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 8px;
+}
+.card:hover{
+    transform: translateY(20px);
+}
+
+.card:before{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(134, 73, 73, 0.5), rgb(66, 55, 35));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.card:hover:before{
+    opacity: 1;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 1;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info h1{
+    margin: 0;
+}
+
+.card .info p{
+    letter-spacing: 1px;
+    font-size: 11px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.card .info .btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.left-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none; 
+}
+    </style>
+<body>
+
+    <a class="left-arrow" href="Home page.html">&#9664;</a>
+
+    <div class="wrapper">
+        <div class="card">
+            <img src="pics for room/1.jpg">
+            <div class="info">
+                <h1>Painting Room</h1>
+                <p>Immerse yourself in a world of vibrant colors and captivating narratives as you wander through the Painting Room, where each canvas tells a unique story of Filipino life and culture.</p>
+                <a href="explore painting.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="pics for room/2.jpg">
+            <div class="info">
+                <h1>Sculpture Room</h1>
+                <p>Feel the weight of history and the craftsmanship of Filipino sculptors come to life in the Sculpture Room, where every sculpture evokes a sense of awe and wonder.</p>
+                <a href="explore sculpture.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="pics for room/3.jpg">
+            <div class="info">
+                <h1>Hero Room</h1>
+                <p>Honor the legacy of Filipino heroes and heroines in the Heroes Room, where artifacts and exhibits pay tribute to the courage, sacrifice, and resilience of those who shaped Philippine history.</p>
+                <a href="explore heroes.html" class="btn">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="pics for room/4.jpg">
+            <div class="info">
+                <h1>Tourist Spot Room</h1>
+                <p>Embark on a virtual journey through the Philippines' most enchanting destinations in the Tourist Spot Room, where stunning landscapes and cultural landmarks await discovery.</p>
+                <a href="explore tourist spot.html" class="btn">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
