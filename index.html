@@ -1,168 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museo De Filipinas_Homepage</title>
-  <link rel="stylesheet" href="homepage.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo De Filipinas - Homepage</title>
+    <style>
+        /* Reset and font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    body, html {
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-    }
+        body {
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: transparent;
+        }
 
-    .Section1 {
-      width: 100%;
-      height: 100vh;
-      background-image: linear-gradient(rgba(12,3,51,0.3), rgba(12,3,51,0.3));
-      position: relative;
-      padding: 0 5%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        /* Video background */
+        .back-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
 
-    nav {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 15px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+        /* Section container */
+        .Section1 {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
 
-    nav .logo {
-      color: #815353;
-      font-size: clamp(16px, 2vw, 24px);
-      font-weight: bold;
-    }
+        /* Navbar */
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        nav .logo h1 {
+            color: #fff;
+            font-size: 20px;
+        }
 
-    nav ul li {
-      list-style: none;
-    }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: clamp(14px, 1.5vw, 18px);
-    }
+        nav ul li {
+            list-style: none;
+        }
 
-    .Section2 {
-      text-align: center;
-      padding: 0 10px;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
 
-    .Section2 h1 {
-      font-size: clamp(36px, 10vw, 120px);
-      color: #f0ebeb;
-      font-weight: 600;
-      transition: 0.5s;
-      line-height: 1.2;
-    }
+        /* Main content */
+        .Section2 h1 {
+            font-size: clamp(36px, 8vw, 100px);
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
 
-    .Section2 h1:hover {
-      -webkit-text-stroke: 2px #fff;
-      color: transparent;
-    }
+        .Section2 a {
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+            background: transparent;
+            font-size: clamp(16px, 3vw, 24px);
+            border: 2px solid #fff;
+            padding: 10px 40px;
+            border-radius: 50px;
+        }
 
-    .Section2 a {
-      text-decoration: none;
-      display: inline-block;
-      color: #fff;
-      font-size: clamp(14px, 2vw, 22px);
-      border: 2px solid #fff;
-      padding: 10px 40px;
-      border-radius: 50px;
-      margin-top: 20px;
-    }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                justify-content: center;
+            }
+            nav .logo h1 {
+                font-size: 18px;
+            }
+        }
 
-    .back-video {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav ul {
-        gap: 15px;
-        margin-top: 10px;
-      }
-
-      .Section2 h1 {
-        font-size: clamp(28px, 8vw, 80px);
-      }
-
-      .Section2 a {
-        padding: 8px 30px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .Section2 h1 {
-        font-size: clamp(22px, 12vw, 60px);
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .Section2 a {
-        font-size: 14px;
-        padding: 6px 20px;
-      }
-    }
-  </style>
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .Section2 h1 {
+                font-size: clamp(28px, 10vw, 60px);
+            }
+            .Section2 a {
+                padding: 8px 25px;
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="Section1">
+
+    <!-- Video Background -->
     <video autoplay loop muted playsinline class="back-video">
-      <source src="main page/bg.mp4" type="video/mp4">
+        <source src="main page/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
     </video>
 
-    <nav>
-      <div class="logo">
-        <h1>MUSEUM</h1>
-      </div>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="room.html">ROOM</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="feedback.html">FEEDBACK</a></li>
-      </ul>
-    </nav>
+    <!-- Main Section -->
+    <div class="Section1">
+        <!-- Navbar -->
+        <nav>
+            <div class="logo">
+                <h1>MUSEUM</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="room.html">ROOM</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="feedback.html">FEEDBACK</a></li>
+            </ul>
+        </nav>
 
-    <div class="Section2">
-      <h1>Museo De <br>Filipinas</h1>
-      <a href="#">Welcome!</a>
+        <!-- Centered Text -->
+        <div class="Section2">
+            <h1>Museo De <br>Filipinas</h1>
+            <a>Welcome!</a>
+        </div>
     </div>
-  </div>
+
 </body>
 </html>
